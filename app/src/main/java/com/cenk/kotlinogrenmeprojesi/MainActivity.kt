@@ -161,6 +161,79 @@ class MainActivity : AppCompatActivity() {
         digerSet.forEach{ println(it)
         }
 
+        println("---------------Map----------------")
+
+        //Anahtar Kelime - Değer (Key-Value Pairing)
+
+        val yemekDizisi = arrayOf("Elma","Et","Tavuk")
+        val kaloriDizisi = arrayOf(100,300,200)
+
+        println("${yemekDizisi[0]}'nın kalorisi: ${kaloriDizisi[0]}")
+
+        val yemekKaloriMap = hashMapOf<String,Int>()
+        yemekKaloriMap.put("Elma",100)
+        yemekKaloriMap.put("Et",300)
+        yemekKaloriMap.put("Tavuk",200)
+
+        println(yemekKaloriMap.get("Et"))
+
+        val benimMapim = HashMap<String,String>()
+        benimMapim.put("Örnek","Değer")
+
+        val yeniMap = hashMapOf<String,Int>("Atıl" to 40,"Örnek" to 50)
+        println(yeniMap.get("Örnek"))
+
+        println("---------------Matematiksel İşlemler----------------")
+
+        var sayi = 8
+        println(sayi)
+        sayi = sayi + 1
+        println(sayi)
+        sayi++
+        println(sayi)
+        sayi--
+        println(sayi)
+
+        var digerSayi = 10
+
+        println(digerSayi > sayi)
+
+        // && -> VE
+        // || -> VEYA
+
+        println(digerSayi > sayi && 2 > 3)
+        println(digerSayi > sayi || 2 > 3)
+
+        println(8 + 7)
+        println(10 - 4)
+        println(20 * 5)
+        println(10 / 2)
+
+        //Remainder - Kalanı Bulmak
+        println(10 % 3) //sonuç 1
+
+        println("---------------If Statements (Eğer Kontrolleri)----------------")
+        val skor = 15
+
+        if(skor < 10){
+            println("Oyunu kaybettin!")
+        }else if(skor >= 10 && skor < 20){
+            println("Skorun 10 ve 20 arasında, çok iyi skor aldın")
+        }else if( skor >= 20 && skor < 30){
+            println("Skorun 20 ve 30 arasında, rekorlar kırıyorsun")
+        }else{
+            println("Skorun 30'un üstünde, efsane oynadın")
+        }
+
+        println("---------------If Statements (Eğer Kontrolleri)----------------")
+
+
+
+
+
+
+
+
     }
 
 
