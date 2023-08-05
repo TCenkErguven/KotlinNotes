@@ -225,13 +225,61 @@ class MainActivity : AppCompatActivity() {
             println("Skorun 30'un üstünde, efsane oynadın")
         }
 
-        println("---------------If Statements (Eğer Kontrolleri)----------------")
+        println("---------------When----------------")
 
+        var notRakami = 0
+        var notStringi = ""
 
+        when(notRakami){
+            0 -> notStringi = "Geçersiz Not"
+            1 -> notStringi = "Zayıf"
+            2 -> notStringi = "Kötü"
+            3 -> notStringi = "Orta"
+            4 -> notStringi = "İyi"
+            else -> notStringi = "Pek İyi"
+        }
 
+        println("---------------For Döngüsü----------------")
 
+        var baskaBirDizi = arrayOf(5,10,15,20,25,30)
+        val q = baskaBirDizi[0] / 5 + 3
+        println(q)
 
+        println("Döngü başladı")
+        for(num in baskaBirDizi){
+            println(num / 5 + 3)
+        }
+        println("Döngü bitti")
 
+        //.indices // geçerli indexlerini ver
+        for(index in baskaBirDizi.indices){
+            println(baskaBirDizi[index] / 5 + 3)
+        }
+
+        for( b in 0..9){
+            println(b)
+        }
+
+        val benimDigerStringDizim = ArrayList<String>()
+        benimDigerStringDizim.add("Cenk")
+        benimDigerStringDizim.add("Ergüven")
+
+        for(str in benimDigerStringDizim){
+            println(str)
+        }
+
+        benimDigerStringDizim.forEach{
+            println(it)
+        }
+
+        println("---------------While Döngüsü----------------")
+
+        var j = 0
+
+        while(j < 10){
+            println(j)
+            j = j + 1
+        }
 
 
     }
